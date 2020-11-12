@@ -89,7 +89,7 @@ function sudoCommand(command, password, withResult, callback) {
 }
 
 function errorFound(line) {
-    const errors = ['E: Invalid operation', 'could not be found', 'command not found', 'Invalid subcommand'];
+    const errors = ['E: Invalid operation', 'could not be found', 'command not found', 'Invalid subcommand', 'not found, did you mean', 'not found, but can be installed with'];
     return errors.filter(err => line.includes(err)).length ? true : false
 }
 
